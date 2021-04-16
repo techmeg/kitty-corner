@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>kitty pix</title>
-    <link rel="stylesheet" type="text/css" href="../style/doc-style.css">
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Doc</title>
+    <link rel="stylesheet" type="text/css" href="../style/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
 
@@ -18,39 +20,42 @@
 
 </head>
 
-<body>
-    <header>
-        <!--nav-bar -->
-        <div class="navbar">
-            <div class="menu-items">
-                <!--regular link -->
-                <h1>Kitty Corner</h1>
-                <div>
-                    <a href="../index.html">Home</a>
-                    <a href="../views/cat-facts.html">Cat Story</a>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn">Kitty Pix
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-
-                        <a href="../views/cats-faces.html">Cat Faces</a>
-                        <a href="../views/cats-sleeping.html">Cats Sleeping</a>
-                        <a href="../views/cats-active.html">Cats Investigating</a>
-                    </div>
-                </div>
-            </div>
+<header id="header">
+    <!--nav-bar -->
+    <nav class="navbar">
+        <div class="logo"><a href="../index.html">Kitty Corner</a></div>
+        <div class="toggle-menu-btn">
+            <span class="bar bar-top"></span>
+            <span class="bar bar-middle"></span>
+            <span class="bar bar-bottom"></span>
         </div>
-    </header>
-    <div id="main-container">
-        <h2> Does your kitty (or you?) need a doctor?</h2>
-        <p> Sometimes it is hard to figure out what is making your cat misbehave. 
-            Ask Dr. Catherine (Dr. Cat for short,
-            get it??). Send us your name and email below and we'll get in touch.</p>
+        <div class="nav-links">
+            <ul>
+                <li> <a href="./views/doctor.html">The Dr. Is In</a></li>
+                <li> <a href="cat-facts.html">Cat Story</a></li>
+                <li> <a href="cats-sleeping.html">Sleeping</a></li>
+                <li> <a href="cats-faces.html">Faces</a></li>
+                <li> <a href="cats-active.html">Investigating</a></li>
+
+            </ul>
+        </div>
+    </nav>
+</header >
+
+ 
+    <main id="main-container">
+
+        <h1> Does your kitty (or you?) need a doctor?</h1>
+        <div class="half-screen">
+            <img class="clinic-img" src="../images/cat-clinic.jpg"/>
+            <p> Sometimes it is hard to figure out what is making your cat misbehave. 
+                Ask Dr. Catherine (Dr. Cat for short,
+                get it??). Send us your name and email below and we'll get in touch.</p>
+        </div>
+
         <!-- Dr. Is IN Form  -->
         <div class="form_container">
-            <h1>The Dr. Is IN</h1>
+            <h2>The Dr. Is IN</h2>
             <form class="form" method="post" action="re" id="form">
                 <div class="field_container">
                     <img src="../images/person.png" />
@@ -61,7 +66,8 @@
                     <img src="../images/person.png" />
                     <input type="text" id="lastname" placeholder="lastname" pattern="^[a-zA-Z_.-]*$[a-zA-Z_.-]*$"
                         required />
-                </div>                <div class="field_container">
+                </div> 
+                <div class="field_container">
                     <img src="../images/email-icon.png" />
                     <input type="email" id="email" value="" placeholder="Email" required />
                 </div>
@@ -72,9 +78,10 @@
         </div>
                             <div id="feedback"></div>
 
-    </div>
+    </main>
 
     <script src="../scripts/regex.js"></script>
+    <script src="../scripts/nav-toggle.js"></script>
 
     <footer>Copyright 2019 Meg Parsons</footer>
 

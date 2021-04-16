@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cats Investigating</title>
-    <link rel="stylesheet" type="text/css" href="../style/style-pix.css">
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../style/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="../scripts/hover-pix.js"></script>
 
@@ -13,49 +15,49 @@
     <style>
     .highlight {
         border: 10px solid gray;
+        transform: scale(2);
+        transition: ease-in-out .5s;
     }
     </style>
 
 </head>
 
 <body>
-    <header>
-        <!--nav-bar -->
-        <div class="navbar">
-            <div class="menu-items">
-                <!--regular link -->
-                <h1>Kitty Corner</h1>
-                <div>
-                    <a href="../views/doctor.html">The Dr. Is In</a>
-                    <a href="../views/cat-facts.html">Cat Story</a>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn">Kitty Pix
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="../index.html">Home</a>
-                        <a href="../views/cats-faces.html">Cat Faces</a>
-                        <a href="../views/cats-sleeping.html">Cats Sleeping</a>
-                    </div>
-                </div>
+    <header id="header">
+
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html">Kitty Corner</a></div>
+            <div class="toggle-menu-btn">
+                <span class="bar bar-top"></span>
+                <span class="bar bar-middle"></span>
+                <span class="bar bar-bottom"></span>
             </div>
-        </div>
-
-
+            <div class="nav-links">
+                <ul>
+                    <li> <a href="doctor.html">The Dr. Is In</a></li>
+                    <li> <a href="cat-facts.html">Cat Story</a></li>
+                    <li> <a href="cats-sleeping.html">Sleeping</a></li>
+                    <li> <a href="cats-faces.html">Faces</a></li>
+                    <li> <a href="#">Investigating</a></li>
+    
+                </ul>
+            </div>
+        </nav>
     </header>
+
     <main id="main-container">
-        <h2>Cat Play.</h2>
+        <h2>Cats play.</h2>
         <p>Jumping, stalking, climbing, chasing -- we love cats at play.</p>
         <section class="gallery-container">
-            <div class="img-tall" id="img-8"></div>
-            <div class="img-tall" id="img-9"></div>
-            <div class="img-tall" id="img-10"></div>
-            <div class="img-tall" id="img-11"></div>
-            <div class="img-tall" id="img-12"></div>
-            <div class="img-tall" id="img-13"></div>
+            <img src="../images/active-adelin-grigorescu-1350162.jpg" class="gallery-item-tall" alt="cat staring intently" />
+            <img src="../images/active-gogolev-aleksandr-1119827.jpg" class="gallery-item-tall" alt="cat attacking person's feet" />
+            <img src="../images/active-philippe-gagne-470601.jpg" class="gallery-item-tall" alt="cat strign at box of plants" />
+            <img src="../images/active-hisakata-hiroyuki-captures-photos-of-ninja-cats.jpg" class="gallery-item-tall" alt="cat standing on hind legs" />
+            <img src="../images/active-jump-play-kitty.jpg.638x0_q80_crop-smart.jpg" class="gallery-item-tall" alt="cat swinging from rope, looking alarmed" />
+            <img src="../images/active-ramiz-dedakovic-1331862.jpg" class="gallery-item-tall" alt="cat climbing up pant leg" />
         </section>
     </main>
+    <script src="../scripts/nav-toggle.js"></script>
 
     <footer>Copyright 2019 Meg Parsons</footer>
 

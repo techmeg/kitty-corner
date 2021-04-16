@@ -3,61 +3,62 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sleeping Cats</title>
-    <link rel="stylesheet" type="text/css" href="../style/style-pix.css">
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../style/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="../scripts/hover-pix.js"></script>
 
 
     <style>
-    .highlight {
-        border: 10px solid gray;
-    }
-    </style>
+        .highlight {
+            border: 10px solid gray;
+            transform: scale(2);
+            transition: ease-in-out .5s;
+        }
+        </style>
 
 </head>
 
 <body>
-    <header>
+    <header id="header">
+
         <!--nav-bar -->
-        <div class="navbar">
-            <div class="menu-items">
-                <!--regular link -->
-                <h1>Kitty Corner</h1>
-                <div>
-                    <a href="../views/doctor.html">The Dr. Is In</a>
-                    <a href="../views/cat-facts.html">Cat Story</a>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn">Kitty Pix
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="../index.html">Home</a>
-                        <a href="../views/cats-faces.html">Cat Faces</a>
-                        <a href="../views/cats-active.html">Cats Investigating</a>
-                    </div>
-                </div>
+        <nav class="navbar">
+            <div class="logo"><a href="../index.html">Kitty Corner</a></div>
+            <div class="toggle-menu-btn">
+                <span class="bar bar-top"></span>
+                <span class="bar bar-middle"></span>
+                <span class="bar bar-bottom"></span>
             </div>
-        </div>
-
-
+            <div class="nav-links">
+                <ul>
+                    <li> <a href="doctor.html">The Dr. Is In</a></li>
+                    <li> <a href="cat-facts.html">Cat Story</a></li>
+                    <li> <a href="#">Sleeping</a></li>
+                    <li> <a href="cats-faces.html">Faces</a></li>
+                    <li> <a href="cats-active.html">Investigating</a></li>
+    
+                </ul>
+            </div>
+        </nav>
     </header>
     <main id="main-container">
         <h2>Kitties in their sweetest state.</h2>
         <p>We adore watching cats nap. Like babies, they can be sprawled out, totally unprotected or nestled under a
             cosy blanket. Sunny spots attract snoozy cats and soft surfaces make for happy napping.</p>
         <section class="gallery-container">
-            <div class="img-item" id="img-1"></div>
-
-            <div class="img-item" id="img-2"></div>
-            <div class="img-item" id="img-3"></div>
-            <div class="img-item" id="img-4"></div>
-            <div class="img-item" id="img-5"></div>
-            <div class="img-item" id="img-6"></div>
+            <img class="gallery-item" src="../images/sleep-joop-vd-schaaf-1337213.jpg" alt="cat asleep on couch"/>
+            <img class="gallery-item" src="../images/sleep-nine-kopfer-488433.jpg" alt="kitten curled up on bed"/>
+            <img class="gallery-item" src="../images/sleep-yanko-peyankov-3539.jpg" alt="cat asleep on window sill"/>
+            <img class="gallery-item" src="../images/sleep-zhan-zhang-1402682.jpg" alt="cat under blanket"/>
+            <img class="gallery-item" src="../images/sleep-jonathan-fink-294000.jpg" alt="cat asleep face up, splayed"/>
+            <img class="gallery-item" src="../images/sleep-ioana-tabarcea-1131016.jpg" alt="cat sleeping on desk"/>
         </section>
     </main>
+    <script src="../scripts/nav-toggle.js"></script>
 
     <footer>Copyright 2019 Meg Parsons</footer>
 

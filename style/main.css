@@ -1,138 +1,418 @@
 /*************** General **************************/
 * {
-  margin: 0px;
-  padding: 0;
   box-sizing: border-box;
-  font-family: 'EB Garamond', serif;
-  color: gray;
-
-
+  color: #606060;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.4;
+	margin: 0px;
+  padding: 0;
 }
-/*************Header w/background Image and nav bar **********/
-header {
-    width: 100%;
-    height: 600px;
-    color: gray;
+
+/************* Text  **********/
+h1 {
+	font-family: 'EB Garamond', serif;
+	font-size: 2rem;
+	font-weight: 400;
+	line-height: 1.1;
+  margin-bottom: 1rem;
 }
+@media (min-width: 750px) {
+	h1 {
+			font-size: 2.5rem;
+			line-height: 1.6;
+	}
+}
+
+h2 {
+	font-family: 'EB Garamond', serif;
+	font-size: 1.75rem;
+	font-weight: 400;
+}
+@media (min-width: 750px) {
+	h2 {
+			font-size: 2rem;
+	}
+}
+
+h3 {
+	font-family: 'EB Garamond', serif;
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+@media (min-width: 750px) {
+	h2 {
+			font-size: 1.75rem;
+  }
+}
+
+p{
+  padding-bottom: 2rem;
+}
+
+/************* Header w/background Image and nav bar **********/
+
+.billboard {
+	color: #606060;
+	height: 600px;
+	width: 100%;
+}
+
 #img-7 {
   background: rosybrown url('../images/header-erik-jan-leusink-104677.jpg') center no-repeat;
   background-size: cover;
 }
-/* nav bar styling */       
+#header {
+	background: rosybrown url('../images/background-header.jpg') center;
+}
+/****************** navigation *************************/   
+
 .navbar {
-    clear: both;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.navbar a {
-    float: right;
-    font-size: 16px;
-    color: gray;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    margin-right: 2%;
+.logo a {
+  font-family: 'EB Garamond', serif;
+  font-size: 2rem;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.nav-links {
+  display: none;
+  width: 100%;
 }
 
-.dropdown {
-    float: right;
-    overflow: hidden;
+.nav-links.active {
+  display: block;
 }
 
-.dropdown .dropbtn {
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: gray;
-    padding: 14px 16px;
-    background-color: inherit;
-    min-width: 160px;
-    font-family: inherit;
-    margin: 0;
+.nav-links ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #afa19e; /* alt, dark blue #3d40f7;*/
+.nav-links ul li {
+  list-style-type: none;
+  margin-right: 1rem;
+
+}
+.nav-links ul li a {
+  display: block;
+  font-size: .875rem;
+  font-weight: 700;
+  padding: 0 0 .125rem;
+  text-decoration: none;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+.nav-links ul li a:hover,
+.nav-links ul li a:focus {
+  background: rgb(226, 223, 223);
+  color: black;
 }
 
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+.toggle-menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  right: 20px;
+  top: 1rem;
+  height: 1.2rem;
+  width: 28px;
 }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
+.bar {
+  background-color: black;
+  border-radius: 30px;
+  height: 3px;
+  width: 100%;
+}
+.bar-top.active {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.bar-bottom.active {
+  transform: rotate(-45deg) translate(6px, -5px);
+}
+.bar-middle.active {
+  display: none;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-h1 {
-    padding: 5px 20px;
-    font-size: 3em;
-    float: left;
-    color: #937b75;
+/******** nav large screens **************/
+@media (min-width: 815px) {
+  .logo a {
+      font-size: 3rem;
+  }
 
+  .toggle-menu-btn {
+      display: none;
+  }
+  .navbar {
+      flex-direction: row;
+      align-items: center;
+  }
+  .nav-links {
+      display: block;
+      width: initial;
+  }
+  .nav-links ul {
+      flex-direction: row;
+      justify-content: flex-end;
+      margin: 0;
+  }
+  .nav-links ul li a {
+    padding: .25rem .5rem;
+  }
 }
 
 /*************** content area *****************/
 #main-container {
-    width: 100%;
-    margin: 20px;
+    max-width: 960px;
+    margin: auto;
+    padding: 2rem 2rem;
 }
-h2 {
-    padding: 20px 0;
+@media (min-width: 815px) {
+  #main-container {
+    padding: 3rem 2rem 5rem;
+  }
 }
+
 /* container for three image boxes */
 .flex-container {
-    width: 90%;
+    flex-direction: column;
+    width: 100%;
     margin: auto;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
+@media (min-width: 750px) {
+    .flex-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
 .img-wrapper {
     margin: 30px;
-    width: 30%;
-    height: 200px;
-        border: 1px solid gray;
+    /* min-width: 200px; */
+    max-width: 330px;
+    height: auto;
+    border: 1px solid gray;
 }
 .img-item {
-/*    border: 2px solid rosybrown;*/
     width: 100%;
-    height: 150px;
     display: block;
+    object-fit: cover;
     padding: 10px;
  }
  .caption {
-     padding: 0 10px;
+     padding: 0 10px 10px;
  }
- h3 {
-     padding-bottom: 10px;
- }
+
+ 
  .blog-button {
     padding: 15px;
     background-color: #C4A49C;
     color: black;
 }
-p{
-    padding-bottom: 20px;
-}
+
  footer {
      width: 100%;
-     border-top: 1px solid gray;
+     border-top: 1px solid #606060;
      padding: 20px;
  }
+
+ /************* Dr Is IN styling************/
+.half-screen {
+	display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+@media (min-width: 550px) {
+  .half-screen {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.clinic-img {
+  width: 250px;
+}
+
+.form_container {
+	/* width: 100%;
+	margin: auto; */
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* background-color: #afa19e; */
+}
+
+@media (min-width: 550px) {
+  .form_container {
+    margin-top: 40px;
+  }
+}
+
+/* .form_container h2{
+	color: white;
+} */
+
+.form {
+	width: 100%;
+	background-color: gray;
+	border-radius: 3px;
+	padding: 30px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.field_container {
+	background-color: whitesmoke;
+	border: none;
+	display: flex;
+	border-radius: 3px;
+	width: 80%;
+	margin: 5px 0;
+}
+.field_container img {
+	width: 40px;
+	height: 40px;
+}
+
+.field_container input {
+	flex-grow: 1;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	padding-left: 10px;
+	font-weight: 700;
+	font-size: 15px;
+  overflow: hidden;
+}
+
+.button_container {
+	background-color: whitesmoke;
+	border: none;
+	display: flex;
+	border-radius: 3px;
+	width: 25%;
+	margin: 5px 0;
+}
+.button_container input {
+	flex-grow: 1;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+	padding: 8px;
+	font-weight: 700;
+	font-size: 15px;
+}
+
+#username:not(:placeholder-shown):invalid {
+	box-shadow: 1px 1px 10px red;
+}
+
+input[type="date"]:before {
+	content: attr(placeholder)!important;
+	color: #aaa;
+	margin-right: 0.5em;
+  overflow: hidden;
+}
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+	content: "";
+}
+.danger {
+	box-shadow: 1px 1px 10px red;
+	padding: 10px;
+	margin: 10px 5px;
+}
+
+#feedback {
+	position: absolute;
+	width: 20%;
+	right: 50px;
+	top:300px;
+	float: right;
+
+}
+
+/***************** Cat Facts  ****************************/
+
+table {
+	width: 80%;
+	margin: auto;
+	padding-bottom: 50px;
+
+}
+.narrow {
+	width: 150px;
+}
+td {
+	border-bottom: 1px solid gray;
+	padding: .5rem 0;
+}
+
+/**************** Picture Gallery **********************/
+.gallery-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center; 
+  align-items: center;
+  flex-flow: row wrap;
+}
+@media (min-width: 960px) {
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-gap: 10px;
+  }
+}
+
+.gallery-item {
+  border: 2px solid rosybrown;
+  width: 300px;
+  height: 175px;
+  object-fit: cover;
+ }
+
+ .gallery-item-tall {
+   border: 2px solid rosybrown;
+   width: 300px;
+   height: 425px;
+   object-fit: cover;
+ }
+
+
+
+#img-8 {
+  background: rosybrown url('../images/active-adelin-grigorescu-1350162.jpg') center no-repeat;
+  background-size: cover;
+}
+#img-9 {
+  background: rosybrown url('../images/active-gogolev-aleksandr-1119827.jpg') center no-repeat;
+  background-size: cover;
+}
+#img-10 {
+  background: rosybrown url('../images/active-philippe-gagne-470601.jpg') center no-repeat;
+  background-size: cover;
+}
+#img-11 {
+  background: rosybrown url('../images/active-hisakata-hiroyuki-captures-photos-of-ninja-cats.jpg') center no-repeat;
+  background-size: cover;
+}
+#img-12 {
+  background: rosybrown url('../images/active-jump-play-kitty.jpg.638x0_q80_crop-smart.jpg') center no-repeat;
+  background-size: cover;
+}
+#img-13 {
+  background: rosybrown url('../images/active-ramiz-dedakovic-1331862.jpg') center no-repeat;
+  background-size: cover;
+}
