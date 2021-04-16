@@ -9,3 +9,4 @@ toggleBtn.addEventListener('click', () => {
     barTop.classList.toggle('active');
     barBottom.classList.toggle('active');
     barMiddle.classList.toggle('active');
+});
