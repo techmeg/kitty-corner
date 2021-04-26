@@ -28,18 +28,21 @@
         <!--nav-bar -->
         <nav class="navbar">
             <div class="logo"><a href="../index.html">Kitty Corner</a></div>
-            <div class="toggle-menu-btn">
-                <span class="bar bar-top"></span>
-                <span class="bar bar-middle"></span>
-                <span class="bar bar-bottom"></span>
-            </div>
+            <button aria-expanded="false" aria-haspopup="true" aria-controls="menu" class="toggle-menu-btn">
+                <svg aria-hidden="true" focusable="false" class="hamburger" viewBox="0 0 100 80" width="40" height="40">
+                    <rect width="100" height="12" rx="8"></rect>
+                    <rect y="30" width="100" height="12" rx="8"></rect>
+                    <rect y="60" width="100" height="12" rx="8"></rect>
+                </svg>
+                 <span class="screen-reader" >Menu</span>
+            </button>
             <div class="nav-links">
-                <ul>
-                    <li> <a href="doctor.html">The Dr. Is In</a></li>
-                    <li> <a href="cat-facts.html">Cat Story</a></li>
-                    <li> <a href="cats-sleeping.html">Sleeping</a></li>
-                    <li> <a href="#">Faces</a></li>
-                    <li> <a href="cats-active.html">Investigating</a></li>
+                <ul role="menu">
+                    <li role="none"> <a role="menu-item" href="doctor.html">The Dr. Is In</a></li>
+                    <li role="none"> <a role="menu-item" href="cat-facts.html">Cat Story</a></li>
+                    <li role="none"> <a role="menu-item" href="cats-sleeping.html">Sleeping</a></li>
+                    <li role="none"> <a role="menu-item" href="#">Faces</a></li>
+                    <li role="none"> <a role="menu-item" href="cats-active.html">Investigating</a></li>
     
                 </ul>
             </div>

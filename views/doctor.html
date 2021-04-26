@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -24,18 +24,22 @@
     <!--nav-bar -->
     <nav class="navbar">
         <div class="logo"><a href="../index.html">Kitty Corner</a></div>
-        <div class="toggle-menu-btn">
-            <span class="bar bar-top"></span>
-            <span class="bar bar-middle"></span>
-            <span class="bar bar-bottom"></span>
-        </div>
+        <button aria-expanded="false" aria-haspopup="true" aria-controls="menu" class="toggle-menu-btn">
+            <svg aria-hidden="true" focusable="false" class="hamburger" viewBox="0 0 100 80" width="40" height="40">
+                <rect width="100" height="12" rx="8"></rect>
+                <rect y="30" width="100" height="12" rx="8"></rect>
+                <rect y="60" width="100" height="12" rx="8"></rect>
+            </svg>
+             <span class="screen-reader" >Menu</span>
+        </button>
+
         <div class="nav-links">
-            <ul>
-                <li> <a href="./views/doctor.html">The Dr. Is In</a></li>
-                <li> <a href="cat-facts.html">Cat Story</a></li>
-                <li> <a href="cats-sleeping.html">Sleeping</a></li>
-                <li> <a href="cats-faces.html">Faces</a></li>
-                <li> <a href="cats-active.html">Investigating</a></li>
+            <ul role="menu">
+                <li role="none"> <a role="menu-item" href="#">The Dr. Is In</a></li>
+                <li role="none"> <a role="menu-item" href="cat-facts.html">Cat Story</a></li>
+                <li role="none"> <a role="menu-item" href="cats-sleeping.html">Sleeping</a></li>
+                <li role="none"> <a role="menu-item" href="cats-faces.html">Faces</a></li>
+                <li role="none"> <a role="menu-item" href="cats-active.html">Investigating</a></li>
 
             </ul>
         </div>
@@ -47,32 +51,32 @@
 
         <h1> Does your kitty (or you?) need a doctor?</h1>
         <div class="half-screen">
-            <img class="clinic-img" src="../images/cat-clinic.jpg"/>
+            <img class="clinic-img" src="../images/cat-clinic.jpg" alt="storefront of a cat clinic"/>
             <p> Sometimes it is hard to figure out what is making your cat misbehave. 
                 Ask Dr. Catherine (Dr. Cat for short,
                 get it??). Send us your name and email below and we'll get in touch.</p>
         </div>
 
-        <!-- Dr. Is IN Form  -->
+        <!-- Dr. Is IN Form  @todo add labels, replace images with svgs -->
         <div class="form_container">
             <h2>The Dr. Is IN</h2>
             <form class="form" method="post" action="re" id="form">
                 <div class="field_container">
-                    <img src="../images/person.png" />
-                    <input type="text" id="firstname" placeholder="firstname" pattern="^[a-zA-Z_.-]*$[a-zA-Z_.-]*$"
+                    <img src="../images/person.png" alt=""/>
+                    <input type="text" aria-label="first name" id="firstname" placeholder="firstname" pattern="^[a-zA-Z_.-]*$[a-zA-Z_.-]*$"
                         required />
                 </div>
                 <div class="field_container">
-                    <img src="../images/person.png" />
-                    <input type="text" id="lastname" placeholder="lastname" pattern="^[a-zA-Z_.-]*$[a-zA-Z_.-]*$"
+                    <img src="../images/person.png" alt=""/>
+                    <input type="text" aria-label="last name" id="lastname" placeholder="lastname" pattern="^[a-zA-Z_.-]*$[a-zA-Z_.-]*$"
                         required />
                 </div> 
                 <div class="field_container">
-                    <img src="../images/email-icon.png" />
-                    <input type="email" id="email" value="" placeholder="Email" required />
+                    <img src="../images/email-icon.png" alt="" />
+                    <input type="email" aria-label="email" id="email" value="" placeholder="Email" required />
                 </div>
                 <div class="button_container">
-                    <input type="submit" value="Submit" />
+                    <input aria-label="submit" type="submit" value="Submit" />
                 </div>
             </form>
         </div>

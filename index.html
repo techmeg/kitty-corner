@@ -16,11 +16,14 @@
         <!--nav-bar -->
         <nav class="navbar">
             <div class="logo"><a href="#">Kitty Corner</a></div>
-            <div class="toggle-menu-btn">
-                <span class="bar bar-top"></span>
-                <span class="bar bar-middle"></span>
-                <span class="bar bar-bottom"></span>
-            </div>
+            <button aria-expanded="false" aria-haspopup="true" aria-controls="menu" class="toggle-menu-btn">
+                <svg aria-hidden="true" focusable="false" class="hamburger" viewBox="0 0 100 80" width="40" height="40">
+                    <rect width="100" height="12" rx="8"></rect>
+                    <rect y="30" width="100" height="12" rx="8"></rect>
+                    <rect y="60" width="100" height="12" rx="8"></rect>
+                </svg>
+                 <span class="screen-reader" >Menu</span>
+            </button>
             <div class="nav-links">
                 <ul>
                     <li> <a href="./views/doctor.html">The Dr. Is In</a></li>
@@ -63,7 +66,7 @@
         <div>
             <h2>Fun facts about cats.</h2>
             <p>Curious as to why the word "cat" is so consistent across so many languages? Check our our
-                <a href="cat-facts">Cat Story</a> page and learn why. Plus enjoy some new definitions for
+                <a href="./views/cat-facts.html">Cat Story</a> page and learn why. Plus enjoy some new definitions for
                 cat-related words. We might have made some of
                 them up. (hee, hee!)</p>
             <h2>Cat problems?</h2>
@@ -74,8 +77,9 @@
             <p>So, as cute as this site is, there is a stellar, not to be missed blog for the cat lover, established by
                 some very clever, artsy french women featuring some staggeringly beautiful male models and their cat
                 counterparts. It's a hoot!</p>
-                <div>  <button class="blog-button" type="button" onclick="newWindow()">Open Awesome Blog</button>
-                </div>
+            <div>
+                <button class="blog-button" type="button" onclick="newWindow()">Open Awesome Blog</button>
+            </div>
         </div>
     </main>
     <footer>Copyright 2019 Meg Parsons</footer>

@@ -25,18 +25,21 @@
         <!--nav-bar -->
         <nav class="navbar">
             <div class="logo"><a href="../index.html">Kitty Corner</a></div>
-            <div class="toggle-menu-btn">
-                <span class="bar bar-top"></span>
-                <span class="bar bar-middle"></span>
-                <span class="bar bar-bottom"></span>
-            </div>
+            <button aria-expanded="false" aria-haspopup="true" aria-controls="menu" class="toggle-menu-btn">
+                <svg aria-hidden="true" focusable="false" class="hamburger" viewBox="0 0 100 80" width="40" height="40">
+                    <rect width="100" height="12" rx="8"></rect>
+                    <rect y="30" width="100" height="12" rx="8"></rect>
+                    <rect y="60" width="100" height="12" rx="8"></rect>
+                </svg>
+                 <span class="screen-reader" >Menu</span>
+            </button>
             <div class="nav-links">
-                <ul>
-                    <li> <a href="doctor.html">The Dr. Is In</a></li>
-                    <li> <a href="#">Cat Story</a></li>
-                    <li> <a href="cats-sleeping.html">Sleeping</a></li>
-                    <li> <a href="cats-faces.html">Faces</a></li>
-                    <li> <a href="cats-active.html">Investigating</a></li>
+                <ul role="menu">
+                    <li role="none"> <a role="menu-item" href="doctor.html">The Dr. Is In</a></li>
+                    <li role="none"> <a role="menu-item" href="#">Cat Story</a></li>
+                    <li role="none"> <a role="menu-item" href="cats-sleeping.html">Sleeping</a></li>
+                    <li role="none"> <a role="menu-item" href="cats-faces.html">Faces</a></li>
+                    <li role="none"> <a role="menu-item" href="cats-active.html">Investigating</a></li>
     
                 </ul>
             </div>
@@ -72,7 +75,8 @@
             paw. Cat burglar is from 1907, so called for stealth. Cat-witted "small-minded, obstinate, and spiteful"
             (1670s) deserved to survive. For Cat's meow, cat's pajamas, see bee's knees. For let the cat out of the
             bag, see bag (n.).</p>
-        <table>
+        <table role="region" aria-labelledby="region2">
+            <h2 id="region2">Curious Cat Vocabulary</h2>
             <tbody>
                 <tr>
                     <td class="narrow"><strong>catwalk (n.)</strong></td>
