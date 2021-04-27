@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="./style/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-       <script src="./scripts/window.js"></script>
 </head>
 
 <body>
@@ -78,12 +77,13 @@
                 some very clever, artsy french women featuring some staggeringly beautiful male models and their cat
                 counterparts. It's a hoot!</p>
             <div>
-                <button class="blog-button" type="button" onclick="newWindow()">Open Awesome Blog</button>
+                <button aria-expanded="false" aria-haspopup="true" aria-controls="newWindow" id="blog" class="blog-button" type="button" onclick="newWindow()">Open Awesome Blog</button>
             </div>
         </div>
     </main>
     <footer>Copyright 2019 Meg Parsons</footer>
     <script src="./scripts/nav-toggle.js"></script>
+    <script src="./scripts/window.js"></script>
 
 </body>
 

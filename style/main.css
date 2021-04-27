@@ -49,6 +49,11 @@ p{
   padding-bottom: 2rem;
 }
 
+a:hover, a:focus {
+  font-weight: 700;
+
+}
+
 /************* Header w/background Image and nav bar **********/
 
 .billboard {
@@ -83,6 +88,7 @@ p{
 .logo a:hover, .logo a:focus {
   background: #fff;
   color: black;
+  font-weight: 400;
 }
 .nav-links {
   display: none;
@@ -214,7 +220,6 @@ p{
 
 .img-wrapper {
     margin: 30px;
-    /* min-width: 200px; */
     max-width: 330px;
     height: auto;
     border: 1px solid gray;
@@ -234,6 +239,9 @@ p{
     padding: 15px;
     background-color: #C4A49C;
     color: black;
+}
+.blog-button:hover, .blog-button:focus {
+  font-weight: 700;
 }
 
  footer {
@@ -404,29 +412,8 @@ td {
    object-fit: cover;
  }
 
+ .highlight {
+  transform: scale(2);
+  transition: ease-in-out .5s;
+}
 
-
-#img-8 {
-  background: rosybrown url('../images/active-adelin-grigorescu-1350162.jpg') center no-repeat;
-  background-size: cover;
-}
-#img-9 {
-  background: rosybrown url('../images/active-gogolev-aleksandr-1119827.jpg') center no-repeat;
-  background-size: cover;
-}
-#img-10 {
-  background: rosybrown url('../images/active-philippe-gagne-470601.jpg') center no-repeat;
-  background-size: cover;
-}
-#img-11 {
-  background: rosybrown url('../images/active-hisakata-hiroyuki-captures-photos-of-ninja-cats.jpg') center no-repeat;
-  background-size: cover;
-}
-#img-12 {
-  background: rosybrown url('../images/active-jump-play-kitty.jpg.638x0_q80_crop-smart.jpg') center no-repeat;
-  background-size: cover;
-}
-#img-13 {
-  background: rosybrown url('../images/active-ramiz-dedakovic-1331862.jpg') center no-repeat;
-  background-size: cover;
-}

@@ -4,7 +4,7 @@
 	    }, function(){
 	        $(this).removeClass("highlight"); //removes 
         });
-	    $(".img-tall").hover(function(){
+	    $(".gallery-item-tall").hover(function(){
 	        $(this).addClass("highlight"); //adds a class
 	    }, function(){
 	        $(this).removeClass("highlight"); //removes 
